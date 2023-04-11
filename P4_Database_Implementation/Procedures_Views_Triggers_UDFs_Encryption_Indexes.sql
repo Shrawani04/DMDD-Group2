@@ -109,8 +109,8 @@ EXEC PropertyDetailsUpdate
 	@PropertyId = 3,
 	@NewType = 'Apartment',
 	@NewOwner = 'Bob Johnson',
-	@NewCity = 'Boston',
-	@NewState = 'Cal',
+	@NewCity = 'San Diego',
+	@NewState = 'California',
 	@NewZip = '02120',
 	@Message = @mess output
 
@@ -253,7 +253,7 @@ AS
 GO
 
 --Example Query to check trigger
-Update property_details set city = 'Boston' where property_id = 2;
+Update property_details set city = 'San Diego' where property_id = 2;
 GO
 SELECT property_id, property_type, property_owner, city, state, zip, company_id, landlord_id, firm_id FROM property_details;
 GO
@@ -291,7 +291,7 @@ AS
 GO
 
 --Example Query to check trigger
-Update customers set city = 'Boston' where customer_id = 2;
+Update customers set city = 'San Diego' where customer_id = 3;
 GO
 SELECT customer_id, NAME, city, state, zip, company_id, firm_id FROM   customers;
 GO
